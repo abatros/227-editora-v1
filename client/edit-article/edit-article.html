@@ -1,0 +1,14 @@
+<template name="edit_article">
+<vbox style="padding:30px; max-width:50vw; min-width:800px;">
+  <div style="margin:10px;">
+    [ <a href="/">main-menu</a> ]
+    [ <a href="#" class="js-update">update (ctrl-S)</a> ]
+    {{> bistable x="Y" id=article.sku q=false on="save" off="quit" onClick=article.save_article}}
+  </div>
+  <div>web-page: {{article.web_page}}</div>
+  <div>sku: {{article.sku}}</div>
+  <textarea id="cm_TextArea"
+    style="height:100vh; margin-top:20px;"
+  ></textarea>
+</vbox>
+</template>

@@ -1,0 +1,22 @@
+<head>
+  <style>
+    .bistable-btn {
+      display: inline-block;
+      border:1px solid gray;
+      margin:3px; padding:3px 8px;
+      cursor:pointer;
+      color:green;
+      min-width:10px;
+      min-height:10px;
+    }
+    .bistable-btn.on {
+      color:red;
+    }
+  </style>
+</head>
+
+<template name="bistable">
+  <div id={{id}} class="bistable-btn">
+    {{caption}}
+  </div>
+</template>

@@ -1,0 +1,18 @@
+hbox {
+  display:flex; flex-direction:row; flex-wrap:nowrap;
+}
+
+hmode {
+  display:flex; flex-direction:row; flex-wrap:wrap;
+}
+
+vbox {
+  display:flex; flex-direction:column;
+}
+
+
+
+body {
+  margin:0px; padding: 0px;
+  font-family: sans-serif;
+}

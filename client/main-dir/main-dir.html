@@ -1,0 +1,48 @@
+<template name="main_dir">
+<vbox class="main-dir"
+  style="
+    margin:20px;
+  "
+>
+
+  {{>main_menu}}
+
+  <h1>List of html pages.</h1>
+  <vbox style="margin:0 20px;">
+    {{#each page in web_pages}}
+      <vbox>
+
+      </vbox>
+      {{> web_page page=page}}
+    {{/each}}
+  </vbox>
+</vbox>
+
+</template>
+
+
+<template name="web_page">
+  <vbox data-fn="{{page.fn}}">
+    <hbox>
+      {{page.fn}} <span class="js-get-articles" style="cursor:pointer;">&ensp;[+]&ensp;</span>
+    </hbox>
+    <vbox style="margin: 10px 0 0 20px;">
+      {{#each article in articles}}
+        <hbox class="js-web-article"
+        style="
+          margin:3px; font-family:monospace; font-size:12px; line-height:16pt;
+        "><span class="js-edit-article"
+        style="cursor:pointer;"
+        data-id="{{article.id}}">{{article.id}}</span>
+        </hbox>
+      {{/each}}
+    </vbox>
+  </vbox>
+</template>
+
+
+<template name="main_menu">
+  <hbox style="margin:20px; border:0px solid white; padding:20px;">
+    <a href="/admin">[ admin ]</a>
+  </hbox>
+</template>
